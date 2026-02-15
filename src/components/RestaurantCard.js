@@ -15,7 +15,6 @@ const RestaurantCard = (props) => {
               <span>{sla.deliveryTime} minutes</span>
             </p>
           </div>
-          <button className="btn btn-outline-primary mt-2 w-100 fw-semibold" style={{borderRadius: '20px'}}>Add to Cart</button>
         </div>
       </div>
     );

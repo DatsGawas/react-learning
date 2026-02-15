@@ -1,6 +1,7 @@
 import { use, useState } from "react";
 import { LOGO_URL } from "../utils/constants";
 import "./../style/Header.css";
+import { Link } from "react-router";
 
 
 
@@ -9,27 +10,27 @@ import "./../style/Header.css";
     return (
       <nav className="navbar navbar-light bg-light shadow-sm mb-4">
         <div className="container-fluid">
-          <a className="navbar-brand d-flex align-items-center" href="#">
+          <Link className="navbar-brand d-flex align-items-center" to="/">
             <img src={LOGO_URL} alt="Logo" className="logo me-2" />
             FoodApp
-          </a>
+          </Link>
           {/* Desktop menu: visible on lg and up */}
           <div className="d-none d-lg-flex ms-auto align-items-center">
             <ul className="navbar-nav flex-row gap-2 mb-0">
               <li className="nav-item">
-                <a className="nav-link active" aria-current="page" href="#">Home</a>
+                <Link to="/" className="nav-link active" aria-current="page">Home</Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#">About Us</a>
+                <Link to="/about" className="nav-link">About Us</Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#">Contact Us</a>
+                <Link to="/contact" className="nav-link">Contact Us</Link>
               </li>
               <li className="nav-item position-relative">
-                <a className="nav-link d-flex align-items-center" href="#">
+                <Link className="nav-link d-flex align-items-center" to="/cart">
                   Cart
                   <span className="badge bg-danger cart-badge">2</span>
-                </a>
+                </Link>
               </li>
             </ul>
             <button className="btn btn-gradient ms-3 px-4 py-2 fw-semibold"
@@ -51,19 +52,19 @@ import "./../style/Header.css";
             <div className="offcanvas-body">
               <ul className="navbar-nav justify-content-end flex-grow-1 pe-3">
                 <li className="nav-item">
-                  <a className="nav-link active" aria-current="page" href="#">Home</a>
+                  <Link className="nav-link active" aria-current="page" to="/">Home</Link>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="#">About Us</a>
+                  <Link className="nav-link" to="/about">About Us</Link>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="#">Contact Us</a>
+                  <Link className="nav-link" to="/contact">Contact Us</Link>
                 </li>
                 <li className="nav-item position-relative">
-                  <a className="nav-link d-flex align-items-center" href="#">
+                  <Link className="nav-link d-flex align-items-center" to="/cart">
                     Cart
                     <span className="badge bg-danger cart-badge">2</span>
-                  </a>
+                  </Link>
                 </li>
               </ul>
               <button className="btn btn-gradient w-100 mt-3 px-4 py-2 fw-semibold"

@@ -1,0 +1,33 @@
+
+    .restaurant-header {
+      background: white;
+      padding: 20px;
+      border-radius: 12px;
+      margin-bottom: 20px;
+    }
+    .menu-card {
+      border-radius: 12px;
+      transition: 0.3s;
+    }
+    .menu-card:hover {
+      transform: scale(1.02);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    .add-btn {
+      background-color: #fc8019;
+      color: white;
+      font-weight: 600;
+    }
+    .add-btn:hover {
+      background-color: #e96b00;
+      color: white;
+    }
+    .category-link {
+      cursor: pointer;
+      padding: 8px;
+      display: block;
+    }
+    .category-link:hover {
+      background-color: #f1f1f1;
+      border-radius: 6px;
+    }
