@@ -1,3 +1,92 @@
+.swiggy-search {
+    max-width: 340px;
+    border: none;
+    border-radius: 32px !important;
+    background: #f5f7fa;
+    box-shadow: 0 2px 16px 0 rgba(56,161,219,0.10);
+    padding-left: 16px;
+    font-size: 1.08rem;
+    height: 38px !important;
+    transition: box-shadow 0.18s, background 0.18s;
+}
+/* Padding between desktop menu links */
+.navbar-nav.flex-row .nav-item {
+    padding-left: 8px;
+    padding-right: 8px;
+}
+body {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #f8fafc 0%, #e0e7ef 100%);
+    font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
+}
+
+.app-body, .container {
+    background: rgba(255,255,255,0.85);
+    margin-bottom: 18px;
+}
+/* Custom styles for Bootstrap offcanvas popup menu */
+.offcanvas.offcanvas-end {
+    background: #222e3c;
+    color: #fff;
+    font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
+    min-width: 220px;
+}
+.offcanvas-header {
+    border-bottom: 1px solid #334155;
+}
+.offcanvas-title {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #fff;
+}
+.offcanvas .navbar-nav .nav-link {
+    color: #fff;
+    font-size: 1.1rem;
+    padding: 12px 0 12px 8px;
+    border-radius: 4px;
+    transition: background 0.15s, color 0.15s;
+}
+.offcanvas .navbar-nav .nav-link.active,
+.offcanvas .navbar-nav .nav-link:focus,
+.offcanvas .navbar-nav .nav-link:hover {
+    background: #334155;
+    color: #4fd1c5;
+}
+.offcanvas .btn-close {
+    filter: invert(1);
+}
+/* Mobile responsive styles */
+@media (max-width: 767.98px) {
+    .card, .res-card {
+        width: 100% !important;
+        margin: 4px 0 !important;
+    }
+    .res-logo, .card-img-top {
+        height: 120px !important;
+        object-fit: cover;
+    }
+    .header, .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .ul-item, .navbar-nav {
+        flex-direction: column !important;
+        width: 100%;
+        align-items: flex-start;
+    }
+    .ul-item > li, .navbar-nav .nav-item {
+        margin: 6px 0;
+        padding: 8px 0;
+    }
+    .container, .app-body {
+        padding: 16px !important;
+    }
+}
+/* Add default shadow to Bootstrap cards */
+.card {
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    transition: box-shadow 0.2s, transform 0.2s, border 0.2s;
+}
 .header {
     display: flex;
     justify-content: space-between;
@@ -25,14 +114,30 @@
 }
 
 .res-card {
-    margin: 10px;
+    margin: 4px;
     padding: 10px;
     width: 295px;
     background-color: #f0f0f0;
+    max-height: 300px;
+}
+
+.card {
+    margin: 4px;
 }
 .res-card:hover {
-    
-    border: 1px solid black;
+    border: 1px solid #007bff;
+    box-shadow: 0 4px 20px rgba(0,123,255,0.15), 0 1.5px 4px rgba(0,0,0,0.08);
+    transform: translateY(-4px) scale(1.03);
+    transition: box-shadow 0.2s, transform 0.2s, border 0.2s;
+    cursor: pointer;
+}
+
+/* Bootstrap card hover effect for all cards */
+.card:hover {
+    border: 1px solid #007bff;
+    box-shadow: 0 4px 20px rgba(0,123,255,0.15), 0 1.5px 4px rgba(0,0,0,0.08);
+    transform: translateY(-4px) scale(1.03);
+    transition: box-shadow 0.2s, transform 0.2s, border 0.2s;
     cursor: pointer;
 }
 .res-logo {
@@ -42,4 +147,20 @@
 .res-container {
     display: flex;
     flex-wrap: wrap;
+}
+
+.filter-btn{
+    margin: 10px;
+    cursor: pointer;
+}
+
+
+.res-card-shimmer {
+    margin: 10px;
+    padding: 10px;
+    width: 295px;
+    background-color: lightgray;
+    max-height: 300px;
+    min-height: 300px;
+
 }
